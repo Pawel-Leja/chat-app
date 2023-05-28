@@ -1,3 +1,11 @@
+/**
+ * This function generates the message response based on the string itself and the channel.
+ * @param {*} sender_username
+ * @param {*} reciever_username
+ * @param {*} message
+ * @param {*} channel
+ * @returns {string} response
+ */
 const getResponse = (sender_username, reciever_username, message, channel) => {
   if (channel === 'instagram') {
     if (message.match(/how are you/i)) {

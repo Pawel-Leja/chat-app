@@ -13,7 +13,9 @@
     "build:sender": "sh scripts/build-function.sh chat-sender",
     "build:trigger": "sh scripts/build-function.sh chat-trigger",
     "build:api": "sh scripts/build-function.sh chat-api",
-    "build:layer": "sh scripts/build-layer.sh"
+    "build:layer": "sh scripts/build-layer.sh",
+    "lint": "eslint **/*.js",
+    "format": "yarn prettier --write **/*.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.341.0",

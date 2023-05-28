@@ -1,3 +1,9 @@
+/**
+ * This is a simple Express app. It exposes two (three with the root) routes.
+ * /conversation
+ * /conversation/:id/chat - where :id is the conversation id
+ */
+
 import serverless from 'serverless-http';
 import express from 'express';
 import pg_pkg from 'pg';
@@ -7,7 +13,7 @@ const app = express();
 const pool = new Pool({ connectionString: process.env.DB_URL });
 
 app.get('/', function (_, res) {
-  res.send('Hello World!');
+  res.send('Welcome to chat app! Feel free to use /conversation or /conversation/:id/chat routes');
 });
 
 app.get('/conversation', async function (_, res) {

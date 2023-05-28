@@ -9,7 +9,7 @@ plugins:
 
 functions:
   app:
-    handler: ./start-local-api.handler
+    handler: ./run-local-api.handler
     events:
       - http:
           method: ANY

@@ -4,5 +4,25 @@
   "main": "index.js",
   "repository": "https://github.com/Pawel-Leja/chat-app",
   "author": "Pawel Leja",
-  "license": "MIT"
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "local:sender": "node run-local.js chat-sender",
+    "build:sender": "sh scripts/build-function.sh chat-sender",
+    "build:trigger": "sh scripts/build-function.sh chat-trigger",
+    "build:api": "sh scripts/build-function.sh chat-api",
+    "build:layer": "sh scripts/build-layer.sh"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.341.0",
+    "@fast-csv/parse": "^4.3.6",
+    "axios": "^1.4.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "eslint": "^8.41.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.8"
+  }
 }

@@ -1,0 +1,25 @@
+service: chat-app
+
+provider:
+  name: aws
+  stage: dev
+
+plugins:
+  - serverless-offline
+
+functions:
+  app:
+    handler: ./start-local-api.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: /static/{any+}
+      - http:
+          method: ANY
+          path: /_next/{proxy+}
+      - http:
+          method: ANY
+          path: /{any+}

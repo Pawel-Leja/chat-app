@@ -9,6 +9,7 @@
   "scripts": {
     "local:sender": "node run-local.js chat-sender",
     "local:trigger": "node run-local.js chat-trigger",
+    "local:api": "serverless offline start --noPrependStageInUrl --reloadHandler --httpPort 3001 --noTimeout",
     "build:sender": "sh scripts/build-function.sh chat-sender",
     "build:trigger": "sh scripts/build-function.sh chat-trigger",
     "build:api": "sh scripts/build-function.sh chat-api",
@@ -18,13 +19,17 @@
     "@aws-sdk/client-s3": "^3.341.0",
     "@fast-csv/parse": "^4.3.6",
     "axios": "^1.4.0",
-    "pg": "^8.11.0"
+    "express": "^4.18.2",
+    "pg": "^8.11.0",
+    "serverless-http": "^3.2.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "serverless": "^3.31.0",
+    "serverless-offline": "^12.0.4"
   }
 }

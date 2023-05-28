@@ -14,7 +14,7 @@ const { handler } = await import(`./${path}/index.js`);
 
 let event = {};
 try {
-  JSON.parse(await readFile(new URL(`./${path}/event.json`, import.meta.url)));
+  event = JSON.parse(await readFile(new URL(`./${path}/event.json`, import.meta.url)));
 } catch (e) {
   console.log('Event file not found');
 }

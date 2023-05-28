@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "local:sender": "node run-local.js chat-sender",
+    "local:trigger": "node run-local.js chat-trigger",
     "build:sender": "sh scripts/build-function.sh chat-sender",
     "build:trigger": "sh scripts/build-function.sh chat-trigger",
     "build:api": "sh scripts/build-function.sh chat-api",
@@ -16,7 +17,8 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.341.0",
     "@fast-csv/parse": "^4.3.6",
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "pg": "^8.11.0"
   },
   "devDependencies": {
     "dotenv": "^16.0.3",
